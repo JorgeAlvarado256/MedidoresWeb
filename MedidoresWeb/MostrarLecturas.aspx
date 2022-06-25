@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="num_medidorDdl">Filtrar por tipos de medidores</label>
-                        <asp:DropDownList OnSelectedIndexChanged="num_medidorDdl_SelectedIndexChanged" runat="server" ID="num_medidor" ></asp:DropDownList>
+                        <asp:DropDownList OnSelectedIndexChanged="num_medidorDdl_SelectedIndexChanged" runat="server" ID="num_medidorDdl" ></asp:DropDownList>
                         <asp:RadioButtonList runat="server" ID="num_medidorRbl">
                        <asp:ListItem Selected="True" Value="num_medidor" Text="numero medidor"></asp:ListItem>
                     </asp:RadioButtonList>
@@ -19,11 +19,9 @@
                         EmptyDataText="No hay Lecturas" ShowHeader="true"
                         AutoGenerateColumns="false" runat="server" ID="grillaLecturas">
 
-
                         <Columns>
                             <asp:BoundField DataField="num_medidor" HeaderText="Numero Medidor" />
                             <asp:BoundField DataField="fecha_lectura" HeaderText="Fecha Lectura" />
-                            <asp:BoundField DataField="compañias" HeaderText="Compañias" />
                             <asp:BoundField DataField="valor_lectura" HeaderText="Valor Lectura" />
                             <asp:BoundField DataField="valor_consumo" HeaderText="Valor Consumo" />
                         </Columns>

@@ -12,7 +12,7 @@ namespace MedidoresWeb
     public partial class MostrarLecturas : System.Web.UI.Page
     {
         private ILecturaDAL lecturaDAL = new LecturaDALObjetos();
-        private IMedidorDAL medidorDAL = new MedidorDALObjetos();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,7 +22,7 @@ namespace MedidoresWeb
 
         }
 
-        private void cargarGrilla(List<Medidor> filtrada)
+        private void cargarGrilla(List<Lectura> filtrada)
         { 
             this.grillaLecturas.DataSource = filtrada;
             this.grillaLecturas.DataBind();
@@ -37,11 +37,11 @@ namespace MedidoresWeb
 
         protected void num_medidorDdl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.num_medidor.SelectedItem != null)
+            if (this.num_medidorRbl.SelectedItem != null)
             {
 
-                string num_medidor = this.num_medidor.SelectedItem.Value;
-                List<Medidor> filtrada = medidorDAL.Filtrar_numMedidor(num_medidor);
+                string num_medidor = this.num_medidorDdl.SelectedItem.Value;
+                List<Lectura> filtrada = lecturaDAL.Filtrar_numMedidor(num_medidor);
                 cargarGrilla(filtrada);
             }
         }

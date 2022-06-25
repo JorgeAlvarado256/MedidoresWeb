@@ -8,12 +8,13 @@ namespace MedidoresWebModel
 {
     public class Medidor
     {
-        private string nroMedidor;
+        private string num_medidor;
         private string cod_medidor;
         private string tipo_medidor;
 
-        public string NroMedidor { get => nroMedidor; set => nroMedidor = value; }
+       
         public string Cod_medidor { get => cod_medidor; set => cod_medidor = value; }
         public string Tipo_medidor { get => tipo_medidor; set => tipo_medidor = value; }
+        public string Num_medidor { get => num_medidor; set => num_medidor = value; }
     }
 }

@@ -15,13 +15,13 @@ namespace MedidoresWeb
     {
 
         /// <summary>
-        /// Control num_medidor.
+        /// Control num_medidorDdl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList num_medidor;
+        protected global::System.Web.UI.WebControls.DropDownList num_medidorDdl;
 
         /// <summary>
         /// Control num_medidorRbl.

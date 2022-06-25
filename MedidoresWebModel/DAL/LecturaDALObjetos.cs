@@ -16,6 +16,11 @@ namespace MedidoresWebModel.DAL
             lecturas.Add(lectura);
         }
 
+        public List<Lectura> Filtrar_numMedidor(string num_medidor)
+        {
+            return lecturas.FindAll(f=> f.Num_medidor==num_medidor);
+        }
+
         public List<Lectura> ObtenerLecturas()
         {
             return lecturas;

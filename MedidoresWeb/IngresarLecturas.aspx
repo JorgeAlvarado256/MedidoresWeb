@@ -29,13 +29,6 @@
                     </div> 
 
                     <div class="form-group">
-                        <label for="companias_Ddl">Compañias</label>
-                        <asp:DropDownList runat="server" ID="companiaDdl" CssClass="form-select">
-              
-                        </asp:DropDownList>
-                    </div>
-
-                    <div class="form-group">
                         <label for="valor_lectura">Ingrese la lectura </label>
                         <asp:TextBox runat="server" ID="valor_lecturaDdl" CssClass="form-group">
                     </asp:TextBox>

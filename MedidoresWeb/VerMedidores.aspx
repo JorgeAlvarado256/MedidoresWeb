@@ -11,8 +11,8 @@
                         <label for="tipo_medidorDdl">Filtrar por tipos de medidores</label>
                         <asp:DropDownList OnSelectedIndexChanged="tipo_medidorDdl_SelectedIndexChanged" runat="server" ID="tipo_medidor"></asp:DropDownList>
                         <asp:RadioButtonList runat="server" ID="tipo_medidorRbl">
-                       <asp:ListItem Selected="True" Value="1" Text="inducción"></asp:ListItem>
-                      <asp:ListItem Selected="True" Value="2" Text="electronicos"></asp:ListItem>
+                       <asp:ListItem Selected="True" Value="inducción" ></asp:ListItem>
+                      <asp:ListItem Selected="True" Value="electronicos"></asp:ListItem>
                     </asp:RadioButtonList>
                     </div>
 
@@ -23,7 +23,7 @@
                         <Columns>
                             <asp:BoundField DataField="num_medidor" HeaderText="Numero Medidor" />
                             <asp:BoundField DataField="cod_medidor" HeaderText="Codigo Medidor" />
-                            <asp:BoundField DataField="tipoMedidor" HeaderText="Tipos de Medidor" />
+                            <asp:BoundField DataField="tipo_Medidor" HeaderText="Tipos de Medidor" />
                         </Columns>
                     </asp:GridView>
                 </div>

@@ -18,7 +18,7 @@ namespace MedidoresWeb
         {
             if (!IsPostBack)
             {
-                List<Medidor> medidor = medidorDAL.ObtenerMedidores();
+                cargarGrilla();
                 
             }
 

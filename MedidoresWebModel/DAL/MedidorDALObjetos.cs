@@ -29,7 +29,7 @@ namespace MedidoresWebModel.DAL
 
         public List<Medidor> Filtrar_numMedidor(string num_medidor)
         {
-            return medidores.FindAll(m => m.NroMedidor == num_medidor);
+            return medidores.FindAll(m => m.Num_medidor == num_medidor);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace MedidoresWebModel.DAL
 
         void AgregarLecturas(Lectura lectura);
 
-       
+        List<Lectura> Filtrar_numMedidor(string num_medidor);
     }
 }
 

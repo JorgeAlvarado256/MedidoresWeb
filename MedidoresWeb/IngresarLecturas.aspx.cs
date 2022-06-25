@@ -15,12 +15,10 @@ namespace MedidoresWeb
         private IMedidorDAL medidorDAL =  new MedidorDALObjetos();
         public void Page_Load(object sender, EventArgs e)
         {
-            List<Medidor> medidores =  medidorDAL.ObtenerMedidores();
-
+            List<Medidor> medidores = medidorDAL.ObtenerMedidores();
             this.num_medidorDdl.DataSource = medidores;
-            this.num_medidorDdl.DataTextField = "num_medidor";
-            this.num_medidorDdl.DataValueField= "tipoMedidor";
-            this.num_medidorDdl.DataBind(); 
+            this.num_medidorDdl.DataValueField = "num_medidor";
+            this.num_medidorDdl.DataBind();
          }
 
 
@@ -29,22 +27,21 @@ namespace MedidoresWeb
 
             string num_medidor = this.num_medidorDdl.SelectedValue;
             DateTime fecha_lectura = this.CalendarioCld.TodaysDate;
-           //DateTime hora_lectura = new DateTime();
-            int  compañia = Convert.ToInt32(this.companiaDdl.SelectedItem.Value);
             string valor_consumo= this.v_consumoTxt.Text.Trim();
             string valor_lectura= this.valor_lecturaDdl.Text.Trim();
 
             List<Medidor> medidores = medidorDAL.ObtenerMedidores();
-            Medidor medidor = medidores.Find(b => b.NroMedidor == this.num_medidorDdl.SelectedItem.Value);
+            Medidor medidor = medidores.Find(b => b.Num_medidor == this.num_medidorDdl.SelectedItem.Value);
 
 
 
-            Lectura lectura = new Lectura()
-            {
-                NroMedidor = num_medidor,
+            List<Lectura> lecturas = lecturaDAL.ObtenerLecturas();
+            Lectura lectura = lecturas.Find(l => l.Num_medidor == this.num_medidorDdl.SelectedItem.Value);
+
+            Lectura lectura1 = new Lectura()
+          {
+                Num_medidor = num_medidor,
                 Fecha_lectura = fecha_lectura,
-                //HoraLectura = hora_lectura,
-                Compañia = compañia,
                 Valor_lectura = valor_lectura,
                 ValorConsumo = valor_consumo,
             };

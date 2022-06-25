@@ -28,7 +28,7 @@ namespace MedidoresWeb
 #pragma warning disable CS0029 // No se puede convertir implícitamente el tipo 'string' en 'int'
            Medidor medidor_ = new Medidor()
             {
-                NroMedidor = nroMedidor,
+                Num_medidor = nroMedidor,
                 Cod_medidor = cod_medidor,
                 Tipo_medidor = tipo_medidor,
             };
